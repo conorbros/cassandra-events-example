@@ -41,13 +41,13 @@ async fn main() {
         match timeout(Duration::from_secs(10), event_recv.recv()).await {
             Ok(recvd) => {
                 if let Ok(event) = recvd {
-                    println!("{:?}", event);
+                    println!("recevied event {:?}", event);
                     assert!(matches!(event, ServerEvent::SchemaChange { .. }));
                     break;
                 };
             }
             Err(err) => {
-                println!("plus tries {}", err);
+                println!("timed out waiting for event");
                 tries += 1;
             }
         }

@@ -1,3 +1,5 @@
-`docker-compose up -d`
+Run Cassandra docker cluster: `docker-compose up -d`
 
-`cargo run`
+Install rust: `curl https://sh.rustup.rs -sSf | sh`
+
+Run application: `cargo run`

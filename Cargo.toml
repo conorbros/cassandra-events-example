@@ -1,0 +1,12 @@
+[package]
+name = "cassandra-events-example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cdrs-tokio = { git = "https://github.com/krojew/cdrs-tokio" }
+tokio = { version = "1.14.0", features = ["full", "macros"] }
+cassandra-protocol = { git = "https://github.com/krojew/cdrs-tokio" }
+rand = { version = "0.8.4" }
